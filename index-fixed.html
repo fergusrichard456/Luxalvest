@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lux Alvest Capital — Boutique M&amp;A &amp; Corporate Finance Advisory · Jakarta</title>
+<meta name="description" content="Lux Alvest Capital is a Jakarta-based boutique advisory firm for M&A, capital raisings, restructurings, and pre- & post-IPO mandates — trusted by IDX-listed companies and founder-led groups.">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --navy:#12264D;
+  --navy-deep:#0D1C3A;
+  --brand-blue:#1B489D;
+  --teal:#12BBB4;
+  --teal-ink:#0B807B;
+  --ink:#152238;
+  --slate:#51607A;
+  --cloud:#F5FAFA;
+  --line:#E3EAEE;
+  --shadow:0 10px 34px rgba(18,38,77,.07);
+  --r:14px;
+  --max:1180px;
+  --measure:800px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+  color:var(--ink);background:#fff;font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+h1,h2,h3,h4{font-family:'Poppins',sans-serif;}
+a{color:var(--teal-ink);text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brand-blue);outline-offset:3px;border-radius:4px;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 30px;}
+.center{max-width:var(--measure);margin-left:auto;margin-right:auto;text-align:center;}
+
+.label{
+  font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--teal-ink);
+  display:block;margin-bottom:18px;
+}
+.btn{
+  display:inline-block;font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;
+  letter-spacing:.08em;text-transform:uppercase;padding:15px 38px;border-radius:8px;
+  background:var(--teal);color:#fff;transition:background .18s ease, transform .18s ease;
+}
+.btn:hover{background:var(--teal-ink);color:#fff;text-decoration:none;transform:translateY(-1px);}
+.textlink{
+  font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--navy);border-bottom:2px solid var(--teal);padding-bottom:4px;
+}
+.textlink:hover{color:var(--teal-ink);text-decoration:none;}
+
+/* ---------- header ---------- */
+.top{position:fixed;top:0;left:0;right:0;z-index:60;transition:background .25s ease, box-shadow .25s ease;}
+.top-in{display:flex;align-items:center;justify-content:space-between;height:86px;transition:height .25s ease;}
+.brand{display:flex;align-items:center;gap:13px;}
+.brand:hover{text-decoration:none;}
+.brand img{width:36px;height:auto;}
+.brand-name{line-height:1.05;color:#fff;transition:color .25s ease;}
+.brand-name b{display:block;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;letter-spacing:.07em;}
+.brand-name span{display:block;font-weight:500;font-size:9px;letter-spacing:.46em;opacity:.75;margin-top:3px;}
+nav{display:flex;align-items:center;gap:30px;}
+nav a.link{font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:500;letter-spacing:.04em;color:rgba(255,255,255,.85);transition:color .25s ease;}
+nav a.link:hover{color:#fff;text-decoration:none;}
+nav .btn{padding:11px 26px;font-size:12.5px;}
+.top.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line), 0 8px 24px rgba(18,38,77,.05);}
+.top.scrolled .top-in{height:70px;}
+.top.scrolled .brand-name{color:var(--ink);}
+.top.scrolled nav a.link{color:var(--slate);}
+.top.scrolled nav a.link:hover{color:var(--ink);}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#fff;overflow:hidden;
+  /* HERO IMAGE SLOT — to use a licensed photo, replace the gradient layers with:
+     background:linear-gradient(rgba(13,28,58,.78),rgba(13,28,58,.78)), url('hero.jpg') center/cover no-repeat; */
+  background:
+    radial-gradient(1100px 640px at 78% 18%, rgba(18,187,180,.26), transparent 62%),
+    radial-gradient(900px 700px at 12% 88%, rgba(27,72,157,.5), transparent 60%),
+    linear-gradient(168deg,var(--navy-deep) 0%,var(--navy) 52%,#173B66 100%);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
+  background-size:26px 26px;opacity:.5;pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;right:-140px;bottom:-160px;width:560px;height:560px;
+  background:url("mark.png") center/contain no-repeat;opacity:.07;pointer-events:none;
+}
+.hero-in{position:relative;z-index:2;padding:140px 30px 110px;max-width:940px;}
+.hero .label{color:var(--teal);opacity:.95;}
+.hero h1{
+  font-size:clamp(42px,6.2vw,74px);font-weight:600;line-height:1.12;letter-spacing:-.01em;
+  margin-bottom:24px;
+}
+.hero h1 span{display:block;}
+.hero .sub{color:rgba(255,255,255,.82);font-size:19px;max-width:640px;margin:0 auto 40px;}
+
+/* ---------- logo wall ---------- */
+.wall{padding:56px 0 60px;border-bottom:1px solid var(--line);}
+.wall .label{text-align:center;color:var(--slate);letter-spacing:.24em;margin-bottom:34px;}
+.wall-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px 44px;align-items:center;}
+.wall-row .cell{
+  width:150px;height:60px;display:flex;align-items:center;justify-content:center;
+}
+.wall-row img{
+  max-width:100%;max-height:100%;object-fit:contain;
+  filter:grayscale(1) opacity(.62);transition:filter .25s ease;
+}
+.wall-row .cell:hover img{filter:none;}
+
+/* ---------- sections ---------- */
+.section{padding:120px 0;}
+.section.cloud{background:var(--cloud);}
+h2.title{font-size:clamp(30px,3.4vw,42px);font-weight:600;letter-spacing:-.01em;margin-bottom:16px;}
+.statement{
+  font-family:'Poppins',sans-serif;font-weight:500;
+  font-size:clamp(20px,2.3vw,27px);line-height:1.62;color:var(--ink);
+}
+.statement + .cta-row{margin-top:44px;}
+.sub{color:var(--slate);font-size:18px;max-width:660px;margin:0 auto;}
+
+/* ---------- what we do grid ---------- */
+.do-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px 60px;margin-top:80px;}
+.do{text-align:left;}
+.do-visual{
+  position:relative;height:210px;border-radius:var(--r);overflow:hidden;margin-bottom:26px;
+  background:linear-gradient(150deg,var(--navy) 0%,var(--brand-blue) 78%,#1E5FA8 100%);
+  box-shadow:var(--shadow);
+}
+.do-visual::before{
+  content:"";position:absolute;width:340px;height:340px;
+  background:url("mark.png") center/contain no-repeat;opacity:.12;
+}
+.do:nth-child(1) .do-visual::before{right:-90px;top:-60px;transform:rotate(12deg);}
+.do:nth-child(2) .do-visual::before{left:-100px;bottom:-110px;transform:rotate(-18deg);}
+.do:nth-child(3) .do-visual::before{right:-70px;bottom:-130px;transform:rotate(28deg);}
+.do:nth-child(4) .do-visual::before{left:-80px;top:-90px;transform:rotate(-8deg);}
+.do-visual b{
+  position:absolute;left:26px;bottom:20px;color:#fff;font-family:'Poppins',sans-serif;
+  font-weight:600;font-size:20px;letter-spacing:.01em;
+}
+.do h3{font-size:22px;font-weight:600;margin-bottom:12px;}
+.do p{color:var(--slate);font-size:16px;}
+
+/* ---------- engagements ---------- */
+.eng-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;margin-top:76px;
+}
+.eng{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:36px 26px 32px;text-align:center;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;align-items:center;
+  transition:transform .2s ease;
+}
+.eng:hover{transform:translateY(-4px);}
+.eng .logo{height:44px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.eng .logo img{max-height:44px;max-width:160px;object-fit:contain;}
+.eng .tag{font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-ink);margin-bottom:14px;}
+.eng p{font-size:14.5px;color:var(--slate);line-height:1.65;}
+
+/* ---------- portfolio ---------- */
+.port-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:76px;
+}
+.port-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:34px 28px;box-shadow:var(--shadow);text-align:left;
+  transition:transform .2s ease;
+}
+.port-card:hover{transform:translateY(-4px);}
+.port-card .logo{height:46px;display:flex;align-items:center;margin-bottom:18px;}
+.port-card .logo img{max-height:46px;max-width:160px;object-fit:contain;}
+.port-card b{font-family:'Poppins',sans-serif;font-weight:600;font-size:18px;display:block;margin-bottom:8px;}
+.port-card p{font-size:14.5px;color:var(--slate);line-height:1.65;}
+.port-note{margin-top:28px;font-size:13.5px;color:var(--slate);text-align:center;}
+
+/* ---------- people ---------- */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 34px;margin-top:76px;}
+.person{text-align:center;}
+.headshot{
+  aspect-ratio:1/1;border-radius:var(--r);margin-bottom:20px;position:relative;overflow:hidden;
+  background:linear-gradient(165deg,#EAF7F6 0%,#DDE9F6 100%);
+  box-shadow:var(--shadow);
+}
+.headshot::before{
+  content:"";position:absolute;width:280px;height:280px;right:-100px;top:-110px;
+  background:url("mark.png") center/contain no-repeat;opacity:.08;
+}
+.headshot img{
+  position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  height:88%;width:auto;max-width:none;
+}
+.person .cap{font-family:'Poppins',sans-serif;font-style:italic;font-weight:600;font-size:18px;}
+.person .cap span{display:block;font-weight:400;font-size:14.5px;color:var(--slate);margin-top:2px;}
+.person .bio{font-size:14.5px;color:var(--slate);margin-top:12px;line-height:1.65;}
+.person a{display:inline-block;margin-top:10px;font-size:13px;font-weight:600;font-family:'Poppins',sans-serif;}
+.adv-title{
+  font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--slate);margin:90px 0 0;text-align:center;
+}
+.adv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,400px));justify-content:center;gap:40px 34px;margin-top:44px;}
+
+/* ---------- connect band ---------- */
+.connect{
+  position:relative;color:#fff;text-align:center;padding:130px 0;overflow:hidden;
+  background:
+    radial-gradient(900px 520px at 20% 15%, rgba(18,187,180,.25), transparent 60%),
+    linear-gradient(168deg,var(--navy-deep) 0%,var(--navy) 60%,#173B66 100%);
+}
+.connect::after{
+  content:"";position:absolute;left:-160px;top:-140px;width:520px;height:520px;
+  background:url("mark.png") center/contain no-repeat;opacity:.06;
+}
+.connect h2{font-size:clamp(34px,4vw,52px);font-weight:600;margin-bottom:18px;position:relative;z-index:1;}
+.connect p{color:rgba(255,255,255,.78);max-width:560px;margin:0 auto 42px;position:relative;z-index:1;}
+.connect .btn{position:relative;z-index:1;}
+
+/* ---------- footer ---------- */
+footer{padding:80px 0 60px;background:#fff;}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:50px;text-align:left;}
+.foot-brand{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.foot-brand img{width:32px;}
+.foot-brand b{font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;letter-spacing:.07em;}
+.foot-grid p, .foot-grid a{font-size:15px;color:var(--slate);}
+.foot-h{
+  font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--ink);margin-bottom:14px;
+}
+.foot-legal{
+  margin-top:60px;padding-top:28px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--slate);line-height:1.6;
+}
+.foot-legal p+p{margin-top:8px;}
+
+/* ---------- motion ---------- */
+.rise{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
+.rise.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .rise{opacity:1;transform:none;transition:none;}
+  .eng:hover,.port-card:hover,.btn:hover{transform:none;}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .team-grid{grid-template-columns:1fr 1fr;}
+  .port-grid{grid-template-columns:1fr 1fr;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:760px){
+  .section{padding:90px 0;}
+  .hero{min-height:84vh;}
+  .do-grid{grid-template-columns:1fr;gap:48px;}
+  .adv-grid{grid-template-columns:1fr;}
+  nav a.link{display:none;}
+  .wall-row{gap:10px 26px;}
+  .wall-row .cell{width:120px;height:50px;}
+}
+@media(max-width:560px){
+  .team-grid,.port-grid{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;gap:36px;}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#" aria-label="Lux Alvest Capital — home">
+      <img src="mark.png" alt="Lux Alvest Capital mark">
+      <span class="brand-name"><b>LUX ALVEST</b><span>CAPITAL</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <a class="link" href="#who">Who we are</a>
+      <a class="link" href="#services">What we do</a>
+      <a class="link" href="#engagements">Engagements</a>
+      <a class="link" href="#portfolio">Portfolio</a>
+      <a class="link" href="#team">Team</a>
+      <a class="btn" href="#connect">Connect</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-in">
+    <span class="label">Boutique M&amp;A &amp; Corporate Finance Advisory · Jakarta</span>
+    <h1><span>Advising Companies,</span><span>With Conviction.</span></h1>
+    <p class="sub">Restructurings, capital raisings, and the road to and beyond IPO — for Indonesia's listed companies and founder-led groups.</p>
+    <a class="btn" href="#connect">Connect</a>
+  </div>
+</section>
+
+<!-- CLIENT LOGO WALL -->
+<section class="wall" aria-label="Selected advisory clients">
+  <div class="wrap">
+    <span class="label">Trusted by boards and founders across Indonesian capital markets</span>
+    <div class="wall-row">
+      <span class="cell"><img src="bmhs.png" alt="BMHS — Bundamedik Healthcare System"></span>
+      <span class="cell"><img src="diagnos.png" alt="Diagnos Clinical Laboratory (IDX: DGNS)"></span>
+      <span class="cell"><img src="zyrex.png" alt="Zyrex (IDX: ZYRX)"></span>
+      <span class="cell"><img src="dgw.png" alt="Delta Giri Wacana (IDX: DGWG)"></span>
+      <span class="cell"><img src="rst.png" alt="RST Group"></span>
+      <span class="cell"><img src="indradhanusa.png" alt="Indradhanusa Group"></span>
+      <span class="cell"><img src="moosa.png" alt="Moosa Genetika Farmindo"></span>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="section" id="who">
+  <div class="wrap center">
+    <span class="label rise">Who we are</span>
+    <p class="statement rise">Lux Alvest Capital is a Jakarta-based boutique advisory firm for mergers &amp; acquisitions, capital raisings, restructurings, and pre- and post-IPO mandates. Our counsel is kept honest by our second practice: we invest our own capital — so every recommendation is accountable to the same test our clients face: durable value for the people who own the business.</p>
+    <div class="cta-row rise"><a class="textlink" href="#team">Meet our team</a></div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="section cloud" id="services">
+  <div class="wrap">
+    <div class="center">
+      <span class="label rise">What we do</span>
+      <h2 class="title rise">Along every stage of the transaction lifecycle.</h2>
+      <p class="sub rise">From the decision to transact, to the structure, the numbers, and the negotiation in between.</p>
+    </div>
+    <div class="do-grid">
+      <div class="do rise">
+        <div class="do-visual" aria-hidden="true"><b>01 — Strategy</b></div>
+        <h3>Deal Strategy</h3>
+        <p>We help owners decide whether, when, and what to transact — M&amp;A strategy, commercial due diligence, and project feasibility studies grounded in first principles.</p>
+      </div>
+      <div class="do rise">
+        <div class="do-visual" aria-hidden="true"><b>02 — Capital</b></div>
+        <h3>Corporate Finance</h3>
+        <p>We structure and execute capital events: capital restructurings, IPO and capital raising, and private equity transactions — from mandate to close.</p>
+      </div>
+      <div class="do rise">
+        <div class="do-visual" aria-hidden="true"><b>03 — Execution</b></div>
+        <h3>Transaction Services</h3>
+        <p>We run the transaction machinery — structuring, financial and tax due diligence, and sale &amp; purchase agreement review — so surprises surface before signing, not after.</p>
+      </div>
+      <div class="do rise">
+        <div class="do-visual" aria-hidden="true"><b>04 — Value</b></div>
+        <h3>Business Valuations</h3>
+        <p>We build the number the negotiation stands on: business and share valuations, and the valuation models behind them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<section class="section" id="engagements">
+  <div class="wrap">
+    <div class="center">
+      <span class="label rise">Selected Engagements</span>
+      <h2 class="title rise">A record measured in completed mandates.</h2>
+      <p class="sub rise">Including advisory to three IDX-listed companies — DGNS, ZYRX, and DGWG.</p>
+    </div>
+    <div class="eng-grid">
+      <div class="eng rise">
+        <div class="logo"><img src="bmhs.png" alt="BMHS"></div>
+        <p class="tag">Healthcare</p>
+        <p>Capital restructuring via rights issue and mandatory convertible bond; acquisition of three hospitals; pre-IPO advisory.</p>
+      </div>
+      <div class="eng rise">
+        <div class="logo"><img src="diagnos.png" alt="Diagnos"></div>
+        <p class="tag">IDX: DGNS · Healthcare</p>
+        <p>Corporate restructuring, pre- &amp; post-IPO advisory, and investor relations for a listed clinical laboratory network.</p>
+      </div>
+      <div class="eng rise">
+        <div class="logo"><img src="dgw.png" alt="Delta Giri Wacana"></div>
+        <p class="tag">IDX: DGWG</p>
+        <p>IPO structure advisory and post-IPO advisory for Delta Giri Wacana.</p>
+      </div>
+      <div class="eng rise">
+        <div class="logo"><img src="zyrex.png" alt="Zyrex"></div>
+        <p class="tag">IDX: ZYRX · Technology</p>
+        <p>Post-IPO advisory for one of Indonesia's homegrown computer and technology manufacturers.</p>
+      </div>
+      <div class="eng rise">
+        <div class="logo"><img src="rst.png" alt="RST Group"></div>
+        <p class="tag">Logistics</p>
+        <p>Corporate restructuring and pre- &amp; post-IPO advisory across the group's trucking and logistics companies.</p>
+      </div>
+      <div class="eng rise">
+        <div class="logo"><img src="indradhanusa.png" alt="Indradhanusa Group"></div>
+        <p class="tag">Private Group</p>
+        <p>Equity transaction advisory.</p>
+      </div>
+      <div class="eng rise">
+        <div class="logo"><img src="moosa.png" alt="MOOSA"></div>
+        <p class="tag">Agri-biotech</p>
+        <p>Fundraising partner and venture partner to a biotech-enabled cattle genetics platform.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section cloud" id="portfolio">
+  <div class="wrap">
+    <div class="center">
+      <span class="label rise">Principal Investments</span>
+      <h2 class="title rise">Where we have put our own capital.</h2>
+    </div>
+    <div class="port-grid">
+      <div class="port-card rise">
+        <div class="logo"><img src="rekosistem.png" alt="Rekosistem"></div>
+        <b>Rekosistem</b>
+        <p>Tech-enabled waste management — collection, segregation, treatment, and recycling infrastructure for Indonesian cities.</p>
+      </div>
+      <div class="port-card rise">
+        <div class="logo"><img src="bobobox.png" alt="Bobobox"></div>
+        <b>Bobobox</b>
+        <p>Modular hospitality operator — Bobocabin and Bobopod — consistently outperforming industry occupancy benchmarks.</p>
+      </div>
+      <div class="port-card rise">
+        <div class="logo"><img src="lighthouse.png" alt="Light House"></div>
+        <b>Light House</b>
+        <p>Clinical weight-management clinics; the category pioneer in Indonesia, built on a clinical standard of care.</p>
+      </div>
+      <div class="port-card rise">
+        <div class="logo"><img src="beyond.png" alt="Beyond"></div>
+        <b>Beyond</b>
+        <p>Fully automated, international-standard laundry operations serving major hospitality players.</p>
+      </div>
+      <div class="port-card rise">
+        <div class="logo"><img src="pawprints.png" alt="Pawprints"></div>
+        <b>Pawprints</b>
+        <p>Indonesia's first producer and distributor of insect-protein pet food.</p>
+      </div>
+      <div class="port-card rise">
+        <div class="logo"><img src="moosa.png" alt="Moosa Genetika"></div>
+        <b>Moosa Genetika</b>
+        <p>Biotech cattle breeding — embryo transfer and genomic selection to lift yield and quality across the Indonesian herd.</p>
+      </div>
+    </div>
+    <p class="port-note rise">Selected holdings across fund and principal vehicles. Portfolio composition changes over time.</p>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" id="team">
+  <div class="wrap">
+    <div class="center">
+      <span class="label rise">Our Team</span>
+      <h2 class="title rise">Principals &amp; advisors.</h2>
+    </div>
+    <div class="team-grid">
+      <div class="person rise">
+        <div class="headshot"><img src="gene.webp" alt="Gene Richard"></div>
+        <p class="cap">Gene Richard<span>Co-Founder &amp; CEO</span></p>
+        <p class="bio">Investor for more than a decade. Former PwC strategy consultant and corporate finance lead across multiple Indonesian healthcare companies.</p>
+        <a href="https://www.linkedin.com/in/generichard/" rel="noopener">LinkedIn →</a>
+      </div>
+      <div class="person rise">
+        <div class="headshot"><img src="fergus.webp" alt="Fergus Richard"></div>
+        <p class="cap">Fergus Richard<span>Co-Founder &amp; CFO</span></p>
+        <p class="bio">Operational and corporate finance leadership across listed and private companies in Indonesia, both national and multinational.</p>
+        <a href="https://www.linkedin.com/in/fergus-richard-26a31074/" rel="noopener">LinkedIn →</a>
+      </div>
+      <div class="person rise">
+        <div class="headshot"><img src="timothy.webp" alt="Timothy William Tjia"></div>
+        <p class="cap">Timothy William Tjia<span>Chief Investment Officer</span></p>
+        <p class="bio">Portfolio management across multiple industries at one of Indonesia's largest private equity and conglomerate groups.</p>
+        <a href="https://www.linkedin.com/in/timothytjia/" rel="noopener">LinkedIn →</a>
+      </div>
+    </div>
+    <p class="adv-title rise">Investment Committee — Board of Advisors</p>
+    <div class="adv-grid">
+      <div class="person rise">
+        <div class="headshot"><img src="ivan.webp" alt="Dr. dr. Ivan Rizal Sini"></div>
+        <p class="cap">Dr. dr. Ivan Rizal Sini, SpOG<span>MD, FRANZCOG, GDRM, MMIS</span></p>
+        <p class="bio">A pioneer of Indonesia's IVF industry and among the country's most respected obstetrics &amp; gynecology physicians, with healthcare business interests extending into biotech and agritech.</p>
+      </div>
+      <div class="person rise">
+        <div class="headshot"><img src="mesha.webp" alt="Ir. Mesha Rizal Sini"></div>
+        <p class="cap">Ir. Mesha Rizal Sini, S.H., M.Eng.<span>Investor &amp; Businessman</span></p>
+        <p class="bio">Business builder with exposure across mining, healthcare, real estate &amp; property, construction, and consumer sectors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section class="connect" id="connect">
+  <div class="wrap">
+    <h2>Connect</h2>
+    <p>Mandates begin with a candid conversation — of the situation as it is, not as the deck presents it.</p>
+    <a class="btn" href="mailto:fergus@luxalvest.com">Email the principals</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="mark.png" alt="Lux Alvest Capital"><b>LUX ALVEST CAPITAL</b></div>
+        <p>Graha Anam, 7th Floor<br>Jl. Teuku Cik Ditiro No. 11A–11C<br>Gondangdia, Menteng<br>Jakarta Pusat 10350, Indonesia</p>
+      </div>
+      <div>
+        <p class="foot-h">Contact</p>
+        <p><a href="tel:+628999008847">+62 899 9008 847</a><br>
+        <a href="mailto:fergus@luxalvest.com">fergus@luxalvest.com</a><br>
+        <a href="mailto:gene.richard@luxalvest.com">gene.richard@luxalvest.com</a></p>
+      </div>
+      <div>
+        <p class="foot-h">Explore</p>
+        <p><a href="#who">Who we are</a><br><a href="#services">What we do</a><br><a href="#engagements">Engagements</a><br><a href="#team">Team</a></p>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <p>© 2026 Lux Alvest Capital. All rights reserved. Client and portfolio company marks are the property of their respective owners.</p>
+      <p>This website is provided for general information only. Nothing on this site constitutes an offer, solicitation, or recommendation to buy or sell any security, or to participate in any investment strategy. Lux Alvest Capital does not offer investment products or portfolio management services to the public.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var top = document.getElementById('top');
+  function onScroll(){ top.classList.toggle('scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.rise').forEach(function(el){el.classList.add('in');});
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.rise').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
